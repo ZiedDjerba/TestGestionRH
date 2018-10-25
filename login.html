@@ -1,42 +1,34 @@
 <!DOCTYPE html>
 <html>
-
 <head>
     <meta charset="utf-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <title>Formulaire De Connexion</title>
+    <title>Login</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-
+    <link rel="stylesheet" type="text/css" media="screen" href="style.css" />
+    <script src="main.js"></script>
 </head>
-
-
 <body>
-    <div> Email: <input id="emai" type="text" name="nom"></div>
-    <p></p>
-    <div> Mot de passe : <input id="motpasse" type="text" name="motpasse"></div>
-    <p id="res"></p>
-    <button type="button" onclick="test_user()">Connexion</button>
-
-
-    <script type="text/javascript" src="jvs.js"></script>
-    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/1.0.272/jspdf.debug.js"></script>
-    <script type="text/javascript">
-
-        function test_user() {
-
-            var objetform_js = JSON.parse(localStorage.getItem("objetformulaire"));
-            console.log(objetform_js.objemail);
-            if (objetform_js.objemail == document.getElementById("emai").value) {
-                document.getElementById("res").innerHTML = "utilisateur existe";
-            } else {
-                document.getElementById("res").innerHTML = "utilisateur introuvable";
-            }
-
-        }
-
-    </script>
-
-
+    <div class="wrapper fadeInDown">
+        <div id="formContent">
+          <!-- Tabs Titles -->
+          <h2 class="active"> Se Connecter </h2>
+          <h2 class="inactive underlineHover">S'inscrire </h2>
+      
+      
+          <!-- Login Form -->
+          <form>
+            <input type="text" id="login" class="fadeIn second" name="login" placeholder="Email">
+            <input type="text" id="password" class="fadeIn third" name="login" placeholder="Mot de passe">
+            <input type="submit" class="fadeIn fourth" value="Log In">
+          </form>
+      
+          <!-- Remind Passowrd -->
+          <div id="formFooter">
+            <a class="underlineHover" href="ForgetPassword.html">Mot de passe oublié?</a>
+          </div>
+      
+        </div>
+      </div>
 </body>
-
 </html>
